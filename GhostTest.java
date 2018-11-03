@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.TreeSet;
 
 public class GhostTest
@@ -52,7 +54,11 @@ public class GhostTest
         
         // How to fix this error?
         //
-        //ArrayList<Integer> scaryKeys = (ArrayList<Integer>) Arrays.asList(values);
+        List<Integer> scaryKeys = Arrays.asList(values);
+        
+        
+        
+        scaryKeys.forEach(k -> System.out.println(k));
         
         keys.forEach(k -> System.out.println(k));
         
