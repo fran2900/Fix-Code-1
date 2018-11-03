@@ -1,16 +1,17 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.TreeMap;
 import java.util.TreeSet;
 
 public class GhostTest
 {
-    class Point
+    class Point implements Comparable 
     {
         private Integer x;
         private Integer y;
         
-        public Point(Integer inX, Integer inY)
+        public Point(Integer inX, Integer inY) 
         {
             x = inX;
             y = inY;
@@ -29,6 +30,13 @@ public class GhostTest
         public boolean equals(Point p)
         {
             return x.equals(p.getX()) && p.getY().equals(y);
+        }
+
+        @Override
+        public int compareTo(Object o)
+        {
+            // TODO Auto-generated method stub
+            return 0;
         }
     }
 
@@ -81,13 +89,13 @@ public class GhostTest
         {
             points.add(p1);
             // How to fix this?
-            //tp.add(p1);
+            tp.add(p1);
         }
         
         points.forEach(p -> System.out.println(p.getX()));
                
         // How to fix this?
-        // tp.addAll(points);
+        tp.addAll(points);
         tp.forEach(p -> System.out.println(p.getX()));
 
         
